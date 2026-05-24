@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Ovo&display=swap');
+@import "tailwindcss";
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Global theme base */
+body {
+  @apply bg-white text-gray-900;
+}
+
+/* Navbar base styles */
+.nav-top {
+  @apply bg-transparent;
+}
+.nav-scroll {
+  @apply bg-white/90 backdrop-blur-lg shadow-md;
+}
+
+/* Navbar links and hover */
+.nav-links a {
+  @apply text-black hover:text-rose-500 transition;
+}
+
+/* Right section */
+.nav-right {
+  @apply bg-transparent;
+}
+.contact-btn {
+  @apply border border-gray-500 text-gray-800 hover:bg-gray-100 transition;
+}
+
+/* Mobile menu */
+.mobile-menu {
+  @apply flex md:hidden flex-col items-center gap-4 py-20 px-10 bg-rose-50 text-gray-900;
+}
+
+/* Transition on all interactive elements */
+nav, div, ul, button, a {
+  @apply transition-colors duration-300;
+}
