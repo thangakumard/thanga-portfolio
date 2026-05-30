@@ -8,7 +8,7 @@ const Contact = () => {
     event.preventDefault();
     setResult("Sending...");
     const formData = new FormData(event.target);
-    formData.append("access_key", "<YOUR_ACCESS_KEY>");
+    formData.append("access_key", import.meta.env.VITE_WEB3FORMS_KEY);
 
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
@@ -28,9 +28,9 @@ const Contact = () => {
         </p>
         <form className='max-w-2xl mx-auto' onSubmit={onSubmit}>
             <div className='grid grid-cols-auto grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 mt-10 mb-8'>
-                <input type='text' placeholder='Your Your Name' name='name'
+                <input type='text' placeholder='Your Name' name='name'
                 className='flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-lg bg-white'/>
-                <input type='email' placeholder='Your Your Email' name='email'
+                <input type='email' placeholder='Your Email' name='email'
                 className='flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-lg bg-white'/>
             </div>
             <textarea rows='6' placeholder='Your Message' name='message'
