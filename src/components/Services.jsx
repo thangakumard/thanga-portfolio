@@ -20,14 +20,6 @@ const Services = () => {
                             <h3 className='text-lg text-gray-700'>{title}</h3>
                         </div>
                         <p className='text-sm text-gray-600 leading-5'>{description}</p>
-                        <a href={link} className='inline-flex items-center gap-2 text-sm mt-5 group'>
-                            <span>Read more</span>
-                            <img
-                                src={assets.right_arrow}
-                                alt=''
-                                className='w-4 transition-transform group-hover:translate-x-1'
-                            />
-                        </a>
                     </div>
                 ))}
             </div>
